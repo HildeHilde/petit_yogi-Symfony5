@@ -1,31 +1,40 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello UserProfileController!{% endblock %}
+{% block content %}
 
-{% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+	<!-- faire un include d'un header correspondant //logout -->
+	{# {% include "user_profile/includes/headerProfile.html.twig" %} #}
+    <div id="overlayer"></div>
+	<section class="site-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-5 mr-auto">
+					<div class="text-left heading-wrap mb-5">
+						<h2 class="mt-0 mb-5">Hello
+							{{ app.user.lastname }}
+						</h2>
 
-<div class="example-wrapper">
-    <h1>Hello {{ app.user.lastname }} ✅</h1>
+						<!-- on affiche chaque membre de la table Membre ds la database -->
+						{% for m in app.user.member %}
+							<p>{{m.firstname}}</p>
+							<!--ajouter l'age et une image-->
+						{% endfor %}
 
 
-<!--on affiche chaque membre de la table Membre ds la database-->
-  {% for m in app.user.member %}
-  <p>{{m.firstname}}</p>
-  <!--ajouter l'age et une image-->
-      
-  {% endfor %}
+						{{ form_start(formulaire) }}
+						{{ form_widget(formulaire.firstname) }}
+						{{ form_widget(formulaire.age) }}
+						<input type="submit" class="btn" value="Envoyer"/>
+						{{ form_end(formulaire)}}
 
-
-{{ form_start(formulaire) }}
-{{ form_widget(formulaire.firstname) }}
-{{ form_widget(formulaire.age) }}
-<input type="submit" class="btn" value="Envoyer" />
-{{ form_end(formulaire)}}
-  
-
+					</div>
+				</div>
+				<div class="col-md-6 position-relative align-self-center">
+					<img src="{{ asset ('assets/images/kids-yoga.jpg') }}" alt="Image" class="img-overlap-1">
+					<img src="{{ asset ('assets/images/babies-doing-yoga.jpg') }}" alt="Image" class="img-overlap-2">
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- ajouter ici les cours de yoga dispo filtres selon age -->
 {% endblock %}
-

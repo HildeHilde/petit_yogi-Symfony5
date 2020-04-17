@@ -1,17 +1,31 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Register{% endblock %}
+{% block content %}
+	{% include "welcome_page/includes/headerHomepage.html.twig" %}
+	<section class="site-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-5 mr-auto">
+					<div class="text-left heading-wrap mb-5">
+						<h2 class="mt-0 mb-5">Inscription</h2>
+                        <!-- Revoir les labels pour que ce soit en FR -->
+						{{ form_start(registrationForm) }}
+						{{ form_row(registrationForm.email) }}
+						{{ form_row(registrationForm.lastname) }}
+						{{ form_row(registrationForm.firstname) }}
+						{{ form_row(registrationForm.plainPassword) }}
+						{{ form_row(registrationForm.agreeTerms) }}
 
-{% block body %}
-    <h1>Register</h1>
+						<button class="btn">Register</button>
+						{{ form_end(registrationForm) }}
+					</div>
+				</div>
+				<div class="col-md-6 position-relative align-self-center">
+					<img src="{{ asset ('assets/images/kids-yoga.jpg') }}" alt="Image" class="img-overlap-1">
+					<img src="{{ asset ('assets/images/babies-doing-yoga.jpg') }}" alt="Image" class="img-overlap-2">
+				</div>
+			</div>
+		</div>
+	</section>
 
-    {{ form_start(registrationForm) }}
-        {{ form_row(registrationForm.email) }}
-        {{ form_row(registrationForm.lastname) }}
-        {{ form_row(registrationForm.firstname) }}
-        {{ form_row(registrationForm.plainPassword) }}
-        {{ form_row(registrationForm.agreeTerms) }}
-
-        <button class="btn">Register</button>
-    {{ form_end(registrationForm) }}
 {% endblock %}
