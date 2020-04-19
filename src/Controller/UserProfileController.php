@@ -28,8 +28,13 @@ class UserProfileController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $form->getData();
             $entityManager = $this->getDoctrine()->getManager();
+
             //Ici on lie le User au Membre grace a l'id_user
-            $userMembre = $entityManager->getRepository(User::class)->findOneBy(array('id' => $this->getUser()->getId()));
+            // $userMembre = $entityManager->getRepository(User::class)->findOneBy(array('id' => $this->getUser()->getId()));
+            // $member->setUser($userMembre);
+
+            //beaucoup plus simple que le code du dessus 
+            $userMembre = $this->getUser();
             $member->setUser($userMembre);
 
             $entityManager->persist($member);
