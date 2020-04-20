@@ -6,6 +6,7 @@ use App\Entity\User;
 use App\Entity\Member;
 use App\Form\MemberType;
 use Symfony\Component\HttpFoundation\Request;
+use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
@@ -41,8 +42,41 @@ class UserProfileController extends AbstractController
             $entityManager->flush();
         }
 
+        // if($member){
+
+        //     $error = $member->getFirstname();
+        //     $message = 'Le yogi ' . $error . ' existe deja';
+        // }
+
+        // 'message' => $message
+
+
+        
         return $this->render('user_profile/user.profile.html.twig', [
-            'formulaire' => $form->createView(),
+            'formulaire' => $form->createView(), 
+        ]);
+    }
+
+
+    /**
+     * @Route("/user/profile/{id}", name="app_delete")
+     */
+    public function delete(Request $request)
+    {
+        $entityManager = $this->getDoctrine()->getManager();
+        $id = $request->get('id');
+        // dd($id);
+        $member = $entityManager->getRepository(Member::class)->find($id);
+
+        // if (!$member) {
+        //     $member->setId($member);
+        // }
+
+        $entityManager->remove($member);
+        $entityManager->flush();
+
+        return $this->redirectToRoute('user_profile', [
+            'id' => $member->getId()
         ]);
     }
 }

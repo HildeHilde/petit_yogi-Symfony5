@@ -17,11 +17,13 @@
 
 						<!-- on affiche chaque membre de la table Membre ds la database -->
 						{% for m in app.user.member %}
-							<div class="mt-0 mb-5">
+							<div class="mt-0 mb-5" id="{{m.id}}">
 								<p>{{m.firstname}}
 									né(e) le
 									{{m.age|date('d/m/Y')}}</p>
 								<!--ajouter l'age et une image-->
+								<a href="/user/profile/{{m.id}}">Supp</a>
+								<input type="hidden" name="id_supp" value="{{m.id}}"/>
 							</div>
 						{% endfor %}
 
@@ -43,9 +45,7 @@
 								{{ form_end(formulaire)}}
 							</div>
 						</div>
-
 					</div>
-
 
 				</div>
 				<div class="col-md-6 position-relative align-self-center">
