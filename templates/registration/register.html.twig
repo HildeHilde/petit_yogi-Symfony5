@@ -8,21 +8,32 @@
 				<div class="col-md-5 mr-auto">
 					<div class="text-left heading-wrap mb-5">
 						<h2 class="mt-0 mb-5">Inscription</h2>
-                        <!-- Revoir les labels pour que ce soit en FR -->
+						<!-- Revoir les labels pour que ce soit en FR -->
 						{{ form_start(registrationForm) }}
-						{{ form_row(registrationForm.email, {'class': 'form-group'}, {'input' : {'class' : 'form-group'}}) }}
-						{{ form_row(registrationForm.lastname) }}
-						{{ form_row(registrationForm.firstname) }}
-						{{ form_row(registrationForm.plainPassword) }}
-						{{ form_row(registrationForm.agreeTerms) }}
-
+						<div class="form-group">
+							{{ form_label(registrationForm.email) }}
+							{{ form_widget(registrationForm.email, {'attr': {'class': 'form-group'}}) }}
+						</div>
+						<div class="form-group">
+							{{ form_label(registrationForm.lastname, 'Nom') }}
+							{{ form_widget(registrationForm.lastname, {'attr': {'class': 'form-group'}}) }}
+						</div>
+						<div class="form-group">
+							{{ form_label(registrationForm.firstname, 'Prénom') }}
+							{{ form_widget(registrationForm.firstname, {'attr': {'class': 'form-group'}}) }}
+						</div>
+						<div class="form-group">
+							{{ form_label(registrationForm.plainPassword, 'Mot de passe') }}
+							{{ form_widget(registrationForm.plainPassword, {'attr': {'class': 'form-group'}}) }}
+						</div>
+						<div class="form-group form-check">
+							{{ form_widget(registrationForm.agreeTerms, {'attr': {'class': 'form-check-input'}}) }}
+							{{ form_label(registrationForm.agreeTerms, ('CGU')) }}<br/>
+							<small id="" class="form-text text-muted">Conditions Générales d'Utilisation</small>
+						</div>
 						<button class="btn">Register</button>
 						{{ form_end(registrationForm) }}
 					</div>
-				</div>
-				<div class="col-md-6 position-relative align-self-center">
-					<img src="{{ asset ('assets/images/kids-yoga.jpg') }}" alt="Image" class="img-overlap-1">
-					<img src="{{ asset ('assets/images/babies-doing-yoga.jpg') }}" alt="Image" class="img-overlap-2">
 				</div>
 			</div>
 		</div>
