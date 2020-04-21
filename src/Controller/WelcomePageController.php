@@ -16,4 +16,12 @@ class WelcomePageController extends AbstractController
             'controller_name' => 'WelcomePageController',
         ]);
     }
+
+    /**
+     * @Route("/accueil/faq", name="app_faq")
+     */
+    public function faq()
+    {
+        return $this->render('welcome_page/faq.html.twig');
+    }
 }

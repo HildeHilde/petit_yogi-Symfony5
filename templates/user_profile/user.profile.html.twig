@@ -5,117 +5,67 @@
 	<!-- faire un include d'un header correspondant //logout -->
 	{% include "user_profile/includes/headerProfile.html.twig" %}
 
-	<section class="site-section">
+	<section class="site-section element-animate" id="user_profile">
+		<div class="mb-0">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-12 text-center heading-wrap">
+						<h3 class="mt-0 mb-3">Namaste,
+							{{app.user.firstname}}</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- YOGI FAMILY -->
 		<div class="container">
 			<div class="row">
-				<div class="col-md-5 mr-auto">
+				<div class="col-md-5 ml-5 mr-auto">
 					<div class="text-left heading-wrap mb-5">
-						<h2 class="mt-0 mb-5">Hello
-							{{ app.user.firstname }}
-						</h2>
-						<h3 class="mt-0 mb-5">Votre Yogi-Family</h3>
-
+						<h3 class="mt-0 mb-3">Ma Yogi Family</h3>
 						<!-- on affiche chaque membre de la table Membre ds la database -->
 						{% for m in app.user.member %}
 							<div class="mt-0 mb-5" id="{{m.id}}">
-								<p>{{m.firstname}}
-									né(e) le
-									<!--ajouter l'age et une image-->
-									{{m.age|date('d/m/Y')}}</p>
-								<a href="/user/profile/{{m.id}}">Supp</a>
-								<input type="hidden" name="id_supp" value="{{m.id}}"/>
+								<ul>
+									<li>{{m.firstname}}
+										né(e) le
+										<!--ajouter l'age et une image-->
+										{{m.age|date('d/m/Y')}}</li>
+									<a href="/user/profile/{{m.id}}">Supp</a>
+									<input type="hidden" name="id_supp" value="{{m.id}}"/>
+								</ul>
 							</div>
 						{% endfor %}
 
 						<!-- formulaire pour créer/insérer un membre [rattaché au user] ds la db -->
 						<p>
 							<a class="btn btn-primary" data-toggle="collapse" href="#collapseMembre" role="button" aria-expanded="false" aria-controls="collapseMembre">
-								Modifier votre famille
+								Ajouter un Yogi
 							</a>
 						</p>
-
 						<div class="collapse" id="collapseMembre">
 							<div class="card card-body">
-								{{ form_start(formulaire, {'class' : 'form-group'}) }}
-								{{ form_row(formulaire.firstname, {'label' : 'Prénom'}) }}
-								{{ form_row(formulaire.age, {'label' : 'Date de naissance'}) }}
+								{{ form_start(formulaire) }}
+								<div class="form-group">
+									{{ form_label(formulaire.firstname, 'Prénom') }}
+									{{ form_widget(formulaire.firstname, {'attr': {'class': 'form-control'}})}}
+								</div>
+								<div class="form-group">
+									{{ form_label(formulaire.age, 'Date de naissance') }}
+									{{ form_widget(formulaire.age, {'attr': {'class': 'form-control'}})}}
+								</div>
 								<input type="submit" class="btn btn-primary" value="Envoyer"/>
 								{{ form_end(formulaire)}}
 							</div>
 						</div>
 					</div>
-
-				</div>
-				<div class="col-md-6 position-relative align-self-center">
-					<img src="{{ asset ('assets/images/kids-yoga.jpg') }}" alt="Image" class="img-overlap-1">
-					<img src="{{ asset ('assets/images/babies-doing-yoga.jpg') }}" alt="Image" class="img-overlap-2">
 				</div>
 			</div>
 		</div>
+
 	</section>
-	<!-- Contenu du Compte Gratuit/Payant -->
-	<section class="site-section" id="gallery-section">
-		<div class="container">
-
-			<div class="row">
-				<div class="col-12 heading-wrap text-center mb-5">
-					<h2 class="mb-5">Votre Programme</h2>
-				</div>
-			</div>
-
-			<div class="row justify-content-center mb-5" data-aos="fade">
-				<div id="filters" class="filters text-center button-group col-md-7">
-					<button class="btn btn-primary active" data-filter="*">All</button>
-					<button class="btn btn-primary" data-filter=".web">Classes</button>
-					<button class="btn btn-primary" data-filter=".design">Intern</button>
-					<button class="btn btn-primary" data-filter=".brand">Training</button>
-				</div>
-			</div>
-
-			<div class="col-12 heading-wrap text-left mb-5">
-				<h3 class="mb-5">Videos</h3>
-			</div>
-			<div id="posts" class="row no-gutter">
-				<div class="item web col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
-					<iframe class="img-fluid" width="250" height="200" src="https://www.youtube.com/embed/OhVoG7TNVUc?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				</div>
-				<div class="item web col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
-					<iframe class="img-fluid" width="250" height="200" src="https://www.youtube.com/embed/bna0mdS4U0k?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				</div>
-				<div class="item web col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
-					<iframe class="img-fluid" width="250" height="200" src="https://www.youtube.com/embed/trZ7IYKCGbc?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				</div>
-			</div>
-			<div class="col-12 heading-wrap text-left mb-5">
-				<h3 class="mb-5">Fiches Techniques</h3>
-			</div>
-			<div id="posts" class="row no-gutter">
-				<div class="item web col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
-					<span>avril 2020</span>
-					<a class="link" href="{{ asset ('assets/download/la_plante.pdf')}}" target="_blank">
-						<img src="{{ asset ('assets/images/la_plante.jpg')}}" alt="fiche-technique a telecharger">
-					</a>
-				</div>
-				<div
-					class="item web col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
-					<span>mars 2020</span>
-					<a class="link" href="{{ asset ('assets/download/le_papillon.pdf')}}" target="_blank">
-						<img src="{{ asset ('assets/images/le_papillon.jpg')}}" alt="fiche-technique a telecharger">
-					</a>
-				</div>
-				<div
-					class="item web col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
-					<span>février 2020</span>
-					<a class="link" href="{{ asset ('assets/download/le_papillon.pdf')}}" target="_blank">
-						<img src="{{ asset ('assets/images/le_toboggan.jpg')}}" alt="fiche-technique a telecharger">
-					</a>
-				</div>
-			</div>
-		</section>
-
-		{% block custom_js %}
-			<script>
-				$('#collapseMembre').collapse({toggle: false})
-			</script>
-		{% endblock %}
-	{% endblock %}
+</section>
+{% block custom_js %}
+	<script>
+		$('#collapseMembre').collapse({toggle: false})
+	</script>
+{% endblock %}{% endblock %}

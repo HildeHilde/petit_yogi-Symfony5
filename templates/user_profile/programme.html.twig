@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+
+	<!-- faire un include d'un header correspondant //logout -->
+	{% include "user_profile/includes/headerProg.html.twig" %}
+
+	<!-- Contenu du Compte Gratuit/Payant -->
+	<section class="site-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 heading-wrap text-center mb-5">
+					<h3 class="mb-0">Mon Programme</h3>
+				</div>
+			</div>
+			<!-- filtrer ici selon l'age de l'enfant -->
+			<div class="row justify-content-center mb-5" data-aos="fade">
+				<div id="filters" class="filters text-center button-group col-md-7">
+					<button class="btn btn-primary active" data-filter="*">All</button>
+					<button class="btn btn-primary" data-filter=".tiny">Les tout-petits</button>
+					<button class="btn btn-primary" data-filter=".minus">4-7ans</button>
+					<button class="btn btn-primary" data-filter=".big">Les Grands</button>
+				</div>
+			</div>
+			<div class="col-12 heading-wrap text-left mb-5">
+				<h3 class="mb-5">Videos &amp; Fiches</h3>
+			</div>
+			<div id="posts" class="row no-gutter">
+				<div class="item tiny col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
+					<iframe class="img-fluid" width="250" height="200" src="https://www.youtube.com/embed/OhVoG7TNVUc?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<div class="item minus col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
+					<iframe class="img-fluid" width="250" height="200" src="https://www.youtube.com/embed/bna0mdS4U0k?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<div class="item big col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
+					<iframe class="img-fluid" width="250" height="200" src="https://www.youtube.com/embed/trZ7IYKCGbc?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<div class="item tiny col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
+					<span>avril 2020</span>
+					<a class="link" href="{{ asset ('assets/download/la_plante.pdf')}}" target="_blank">
+						<img src="{{ asset ('assets/images/la_plante.jpg')}}" alt="fiche-technique a telecharger">
+					</a>
+				</div>
+				<div class="item big col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
+					<span>mars 2020</span>
+					<a class="link" href="{{ asset ('assets/download/le_papillon.pdf')}}" target="_blank">
+						<img src="{{ asset ('assets/images/le_papillon.jpg')}}" alt="fiche-technique a telecharger">
+					</a>
+				</div>
+				<div class="item minus col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
+					<span>février 2020</span>
+					<a class="link" href="{{ asset ('assets/download/le_papillon.pdf')}}" target="_blank">
+						<img src="{{ asset ('assets/images/le_toboggan.jpg')}}" alt="fiche-technique a telecharger">
+					</a>
+				</div>
+			</div>
+		</section>
+	{% endblock %}

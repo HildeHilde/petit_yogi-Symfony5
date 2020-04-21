@@ -79,4 +79,12 @@ class UserProfileController extends AbstractController
             'id' => $member->getId()
         ]);
     }
+
+    /**
+     * @Route("/user/mon-programme", name="app_prog")
+     */
+    public function programme()
+    {
+        return $this->render('user_profile/programme.html.twig');
+    }
 }
