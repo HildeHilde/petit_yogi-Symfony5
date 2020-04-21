@@ -3,7 +3,7 @@
 
 {% block content %}
 
-{% include "welcome_page/includes/headerHomepage.html.twig" %}
+	{% include "welcome_page/includes/headerHomepage.html.twig" %}
 
 	<div class="site-blocks-cover overlay" style="background-image: url({{ asset ('assets/images/kids-yoga-group-2.jpg') }});" data-aos="fade" data-stellar-background-ratio="0.5" id="home-section">
 		<div class="container">
@@ -13,11 +13,11 @@
 					<h1 class="font-weight-bold">Un studio de Yoga dans votre salon</h1>
 					<p class="sub-text mb-4 d-block">Une tenue confortable, au moins un tapis et surtout le sourire, c'est tout ce qu'il faut pour pratiquer ensemble le Yoga !</p>
 					{# A AJOUTER POUR FAKER VIDEO DANS USER CONNECTE <a data-fancybox data-ratio="2" href="https://vimeo.com/332538199" class="d-inline-flex align-items-center">
-																																									<span class="play-button d-block mr-3">
-																																										<span class="icon-play"></span>
-																																									</span>
-																																									<span class="text-white">Regarder la vidéo de présentation</span>
-																																								</a> #}
+																																																			<span class="play-button d-block mr-3">
+																																																				<span class="icon-play"></span>
+																																																			</span>
+																																																			<span class="text-white">Regarder la vidéo de présentation</span>
+																																																		</a> #}
 				</div>
 			</div>
 		</div>
@@ -25,173 +25,173 @@
 
 
 	{# <section class="site-section" id="classes-section">
-													
-																	<div class="clearfix mb-5 pb-5">
-																		<div class="container">
-																			<div class="row">
-																				<div class="col-md-7 text-left heading-wrap">
-																					<h2 class="mt-0">Featured Classes</h2>
-																					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+															
+																			<div class="clearfix mb-5 pb-5">
+																				<div class="container">
+																					<div class="row">
+																						<div class="col-md-7 text-left heading-wrap">
+																							<h2 class="mt-0">Featured Classes</h2>
+																							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+																						</div>
+																						<div class="col-md-5 align-self-center text-md-right">
+																							<a href="#" class="btn btn-primary customPrevBtn">Previous</a>
+																							<a href="#" class="btn btn-primary customNextBtn">Next</a>
+																						</div>
+																					</div>
 																				</div>
-																				<div class="col-md-5 align-self-center text-md-right">
-																					<a href="#" class="btn btn-primary customPrevBtn">Previous</a>
-																					<a href="#" class="btn btn-primary customNextBtn">Next</a>
-																				</div>
 																			</div>
-																		</div>
-																	</div>
-													
-																	<div class="owl-carousel centernonloop">
-																		<a href="#" class="item-class">
-																			<div class="text">
-																				<p class="class-price">$29.99</p>
-																				<h2 class="class-heading">Ashtanga Foundations</h2>
+															
+																			<div class="owl-carousel centernonloop">
+																				<a href="#" class="item-class">
+																					<div class="text">
+																						<p class="class-price">$29.99</p>
+																						<h2 class="class-heading">Ashtanga Foundations</h2>
+																					</div>
+																					<img src="images/doyoga_img_1.jpg" alt="" class="img-fluid">
+																				</a>
+																				<a href="#" class="item-class">
+																					<div class="text">
+																						<p class="class-price">$32.99</p>
+																						<h2 class="class-heading">Surya Vinyasa</h2>
+																					</div>
+																					<img src="images/doyoga_img_2.jpg" alt="" class="img-fluid">
+																				</a>
+																				<a href="#" class="item-class">
+																					<div class="text">
+																						<p class="class-price">$22.99</p>
+																						<h2 class="class-heading">Chandra Vinyasa</h2>
+																					</div>
+																					<img src="images/doyoga_img_3.jpg" alt="" class="img-fluid">
+																				</a>
+																				<a href="#" class="item-class">
+																					<div class="text">
+																						<p class="class-price">$34.99</p>
+																						<h2 class="class-heading">Yinyasa</h2>
+																					</div>
+																					<img src="images/doyoga_img_1.jpg" alt="" class="img-fluid">
+																				</a>
 																			</div>
-																			<img src="images/doyoga_img_1.jpg" alt="" class="img-fluid">
-																		</a>
-																		<a href="#" class="item-class">
-																			<div class="text">
-																				<p class="class-price">$32.99</p>
-																				<h2 class="class-heading">Surya Vinyasa</h2>
-																			</div>
-																			<img src="images/doyoga_img_2.jpg" alt="" class="img-fluid">
-																		</a>
-																		<a href="#" class="item-class">
-																			<div class="text">
-																				<p class="class-price">$22.99</p>
-																				<h2 class="class-heading">Chandra Vinyasa</h2>
-																			</div>
-																			<img src="images/doyoga_img_3.jpg" alt="" class="img-fluid">
-																		</a>
-																		<a href="#" class="item-class">
-																			<div class="text">
-																				<p class="class-price">$34.99</p>
-																				<h2 class="class-heading">Yinyasa</h2>
-																			</div>
-																			<img src="images/doyoga_img_1.jpg" alt="" class="img-fluid">
-																		</a>
-																	</div>
-																</section> #}
-	<!-- .section -->
+																		</section> #}
+	<!-- .section --> 
 
 	{# <section class="site-section" id="schedule-section">
-																	<div class="container">
-																		<div class="row mb-5">
-																			<div class="col-md-7 text-left heading-wrap mb-5">
-																				<h2 class="mt-0">Notre Offre</h2>
-																				<p>Chaque mois, grâce à notre abonnement à prix tout doux, recevez un nouveau contenu intéractif et téléchargeable (vidéos, fiches technique)</p>
+																			<div class="container">
+																				<div class="row mb-5">
+																					<div class="col-md-7 text-left heading-wrap mb-5">
+																						<h2 class="mt-0">Notre Offre</h2>
+																						<p>Chaque mois, grâce à notre abonnement à prix tout doux, recevez un nouveau contenu intéractif et téléchargeable (vidéos, fiches technique)</p>
+																					</div>
+															
+																				</div>
 																			</div>
-													
+															
+																			<div class="container-fluid">
+															
+																				<div class="row no-gutters">
+																					<div class="col-md-6">
+																						<div class="sched d-block d-lg-flex">
+																							<div class="bg-image order-2" style="background-image: url('images/doyoga_img_1.jpg');"></div>
+																							<div class="text order-1">
+																								<h3>L'Abonnement</h3>
+																								<p>Continuez à pratiquer à votre rythme, avec la possibilité de regarder les videos en mode hors-connexion</p>
+																								<p class="sched-time">
+																									<span>
+																										<span class="fa fa-clock-o"></span>
+																										paiement mensuel</span>
+																									<br>
+																									<span>
+																										<span class="fa fa-calendar"></span>
+																										sans frais de résiliation</span>
+																									<br>
+																								</p>
+																								<p>
+																									<a href="#" class="btn btn-primary btn-sm">Rejoignez-nous pour 5,99€/mois</a>
+																								</p>
+															
+																							</div>
+															
+																						</div>
+															
+																						<div class="sched d-block d-lg-flex">
+																							<div class="bg-image" style="background-image: url('images/doyoga_img_2.jpg');"></div>
+																							<div class="text">
+																								<h3>Chandra Vinyasa</h3>
+																								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts...</p>
+																								<p class="sched-time">
+																									<span>
+																										<span class="fa fa-clock-o"></span>
+																										5:30 PM</span>
+																									<br>
+																									<span>
+																										<span class="fa fa-calendar"></span>
+																										April 22, 2019</span>
+																									<br>
+																								</p>
+																								<p>
+																									<a href="#" class="btn btn-primary btn-sm">Join from $15</a>
+																								</p>
+															
+																							</div>
+															
+																						</div>
+															
+																					</div>
+															
+																					<div class="col-md-6">
+																						<div class="sched d-block d-lg-flex">
+																							<div class="bg-image order-2" style="background-image: url('images/doyoga_img_3.jpg');"></div>
+																							<div class="text order-1">
+																								<h3>Surya Vinyasa</h3>
+																								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts...</p>
+																								<p class="sched-time">
+																									<span>
+																										<span class="fa fa-clock-o"></span>
+																										5:30 PM</span>
+																									<br>
+																									<span>
+																										<span class="fa fa-calendar"></span>
+																										April 22, 2019</span>
+																									<br>
+																								</p>
+																								<p>
+																									<a href="#" class="btn btn-primary btn-sm">Join from $15</a>
+																								</p>
+															
+																							</div>
+															
+																						</div>
+															
+																						<div class="sched d-block d-lg-flex">
+																							<div class="bg-image" style="background-image: url('images/doyoga_img_1.jpg');"></div>
+																							<div class="text">
+																								<h3>Ashtanga Foundations</h3>
+																								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts...</p>
+																								<p class="sched-time">
+																									<span>
+																										<span class="fa fa-clock-o"></span>
+																										5:30 PM</span>
+																									<br>
+																									<span>
+																										<span class="fa fa-calendar"></span>
+																										April 22, 2019</span>
+																									<br>
+																								</p>
+																								<p>
+																									<a href="#" class="btn btn-primary btn-sm">Join from $15</a>
+																								</p>
+															
+																							</div>
+															
+																						</div>
+															
+																					</div>
+																				</div>
+																			</div>
+															
 																		</div>
-																	</div>
-													
-																	<div class="container-fluid">
-													
-																		<div class="row no-gutters">
-																			<div class="col-md-6">
-																				<div class="sched d-block d-lg-flex">
-																					<div class="bg-image order-2" style="background-image: url('images/doyoga_img_1.jpg');"></div>
-																					<div class="text order-1">
-																						<h3>L'Abonnement</h3>
-																						<p>Continuez à pratiquer à votre rythme, avec la possibilité de regarder les videos en mode hors-connexion</p>
-																						<p class="sched-time">
-																							<span>
-																								<span class="fa fa-clock-o"></span>
-																								paiement mensuel</span>
-																							<br>
-																							<span>
-																								<span class="fa fa-calendar"></span>
-																								sans frais de résiliation</span>
-																							<br>
-																						</p>
-																						<p>
-																							<a href="#" class="btn btn-primary btn-sm">Rejoignez-nous pour 5,99€/mois</a>
-																						</p>
-													
-																					</div>
-													
-																				</div>
-													
-																				<div class="sched d-block d-lg-flex">
-																					<div class="bg-image" style="background-image: url('images/doyoga_img_2.jpg');"></div>
-																					<div class="text">
-																						<h3>Chandra Vinyasa</h3>
-																						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts...</p>
-																						<p class="sched-time">
-																							<span>
-																								<span class="fa fa-clock-o"></span>
-																								5:30 PM</span>
-																							<br>
-																							<span>
-																								<span class="fa fa-calendar"></span>
-																								April 22, 2019</span>
-																							<br>
-																						</p>
-																						<p>
-																							<a href="#" class="btn btn-primary btn-sm">Join from $15</a>
-																						</p>
-													
-																					</div>
-													
-																				</div>
-													
-																			</div>
-													
-																			<div class="col-md-6">
-																				<div class="sched d-block d-lg-flex">
-																					<div class="bg-image order-2" style="background-image: url('images/doyoga_img_3.jpg');"></div>
-																					<div class="text order-1">
-																						<h3>Surya Vinyasa</h3>
-																						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts...</p>
-																						<p class="sched-time">
-																							<span>
-																								<span class="fa fa-clock-o"></span>
-																								5:30 PM</span>
-																							<br>
-																							<span>
-																								<span class="fa fa-calendar"></span>
-																								April 22, 2019</span>
-																							<br>
-																						</p>
-																						<p>
-																							<a href="#" class="btn btn-primary btn-sm">Join from $15</a>
-																						</p>
-													
-																					</div>
-													
-																				</div>
-													
-																				<div class="sched d-block d-lg-flex">
-																					<div class="bg-image" style="background-image: url('images/doyoga_img_1.jpg');"></div>
-																					<div class="text">
-																						<h3>Ashtanga Foundations</h3>
-																						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts...</p>
-																						<p class="sched-time">
-																							<span>
-																								<span class="fa fa-clock-o"></span>
-																								5:30 PM</span>
-																							<br>
-																							<span>
-																								<span class="fa fa-calendar"></span>
-																								April 22, 2019</span>
-																							<br>
-																						</p>
-																						<p>
-																							<a href="#" class="btn btn-primary btn-sm">Join from $15</a>
-																						</p>
-													
-																					</div>
-													
-																				</div>
-													
-																			</div>
-																		</div>
-																	</div>
-													
-																</div>
-															</body>
-														</html>
-													</section> #}
+																	</body>
+																</html>
+															</section> #}
 	<!-- .section -->
 
 		<section class="site-section" id="qui-nous-sommes"> <div class="container">
@@ -228,10 +228,9 @@
 							<h3>L'Abonnement</h3>
 							<strong>
 								<p>
-									{# <span>
-																																																													<span></span> #}
+									<span></span>
+
 									<strong>5.99 € / mois</strong>
-									{#</span>#}
 									<br>
 								</p>
 							</strong>
@@ -246,139 +245,30 @@
 					</div>
 				</div>
 				{# <div class="col-md-6">
-																																<div class="blog d-block d-lg-flex">
-																																	<div class="bg-image" style="background-image: url('images/doyoga_img_2.jpg');"></div>
-																																	<div class="text">
-																																		<h3>Fitness Class Name Here</h3>
-																																		<p class="sched-time">
-																																			<span>
-																																				<span class="fa fa-calendar"></span>
-																																				April 22, 2018</span>
-																																			<br>
-																																		</p>
-																																		<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia..</p>
-																												
-																																		<p>
-																																			<a href="#" class="btn btn-primary btn-sm">Read More</a>
-																																		</p>
-																												
-																																	</div>
-																												
-																																</div>
-																															</div> #}
+																																								<div class="blog d-block d-lg-flex">
+																																									<div class="bg-image" style="background-image: url('images/doyoga_img_2.jpg');"></div>
+																																									<div class="text">
+																																										<h3>Fitness Class Name Here</h3>
+																																										<p class="sched-time">
+																																											<span>
+																																												<span class="fa fa-calendar"></span>
+																																												April 22, 2018</span>
+																																											<br>
+																																										</p>
+																																										<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia..</p>
+																																				
+																																										<p>
+																																											<a href="#" class="btn btn-primary btn-sm">Read More</a>
+																																										</p>
+																																				
+																																									</div>
+																																				
+																																								</div>
+																																							</div> #}
 
 			</div>
 		</div>
 	</section>
-
-	{# à utiliser pour la page du user connecté #}
-	{# <section class="site-section" id="gallery-section">
-														<div class="container">
-													
-															<div class="row">
-																<div class="col-12 heading-wrap text-center mb-5">
-																	<h2 class="mb-5">Yoga Gallery</h2>
-																</div>
-															</div>
-													
-															<div class="row justify-content-center mb-5" data-aos="fade">
-																<div id="filters" class="filters text-center button-group col-md-7">
-																	<button class="btn btn-primary active" data-filter="*">All</button>
-																	<button class="btn btn-primary" data-filter=".web">Classes</button>
-																	<button class="btn btn-primary" data-filter=".design">Intern</button>
-																	<button class="btn btn-primary" data-filter=".brand">Training</button>
-																</div>
-															</div>
-													
-															<div id="posts" class="row no-gutter">
-																<div class="item web col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
-																	<a href="images/doyoga_img_1.jpg" class="item-wrap fancybox">
-																		<span class="icon-search2"></span>
-																		<img class="img-fluid" src="images/doyoga_img_1.jpg">
-																	</a>
-																</div>
-																<div class="item web col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
-																	<a href="images/doyoga_img_2.jpg" class="item-wrap fancybox">
-																		<span class="icon-search2"></span>
-																		<img class="img-fluid" src="images/doyoga_img_2.jpg">
-																	</a>
-																</div>
-													
-																<div class="item brand col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
-																	<a href="images/doyoga_img_3.jpg" class="item-wrap fancybox">
-																		<span class="icon-search2"></span>
-																		<img class="img-fluid" src="images/doyoga_img_3.jpg">
-																	</a>
-																</div>
-													
-																<div class="item design col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
-													
-																	<a href="images/doyoga_about_1.jpg" class="item-wrap fancybox">
-																		<span class="icon-search2"></span>
-																		<img class="img-fluid" src="images/doyoga_about_1.jpg">
-																	</a>
-													
-																</div>
-													
-																<div class="item web col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
-																	<a href="images/doyoga_about_2.jpg" class="item-wrap fancybox">
-																		<span class="icon-search2"></span>
-																		<img class="img-fluid" src="images/doyoga_about_2.jpg">
-																	</a>
-																</div>
-													
-																<div class="item brand col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
-																	<a href="images/doyoga_about_3.jpg" class="item-wrap fancybox">
-																		<span class="icon-search2"></span>
-																		<img class="img-fluid" src="images/doyoga_about_3.jpg">
-																	</a>
-																</div>
-													
-																<div class="item web col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
-																	<a href="images/doyoga_about_4.jpg" class="item-wrap fancybox">
-																		<span class="icon-search2"></span>
-																		<img class="img-fluid" src="images/doyoga_about_4.jpg">
-																	</a>
-																</div>
-													
-																<div class="item design col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
-																	<a href="images/doyoga_img_1.jpg" class="item-wrap fancybox">
-																		<span class="icon-search2"></span>
-																		<img class="img-fluid" src="images/doyoga_img_1.jpg">
-																	</a>
-																</div>
-													
-																<div class="item web col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
-																	<a href="images/doyoga_img_2.jpg" class="item-wrap fancybox">
-																		<span class="icon-search2"></span>
-																		<img class="img-fluid" src="images/doyoga_img_2.jpg">
-																	</a>
-																</div>
-													
-																<div class="item design col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
-																	<a href="images/doyoga_about_4.jpg" class="item-wrap fancybox">
-																		<span class="icon-search2"></span>
-																		<img class="img-fluid" src="images/doyoga_about_4.jpg">
-																	</a>
-																</div>
-													
-																<div class="item brand col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
-																	<a href="images/doyoga_about_1.jpg" class="item-wrap fancybox">
-																		<span class="icon-search2"></span>
-																		<img class="img-fluid" src="images/doyoga_about_1.jpg">
-																	</a>
-																</div>
-													
-																<div class="item brand col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
-																	<a href="images/doyoga_about_2.jpg" class="item-wrap fancybox">
-																		<span class="icon-search2"></span>
-																		<img class="img-fluid" src="images/doyoga_about_2.jpg">
-																	</a>
-																</div>
-													
-															</div>
-														</div>
-													</section> #}
 
 	<section class="site-section element-animate" id="contactez-nous">
 		<div class="mb-5">
@@ -433,9 +323,9 @@
 						</p>
 
 						{# <p class="d-flex">
-																																																	<span class="ion-ios-telephone icon mr-5"></span>
-																																																	<span>+1 242 4942 290</span>
-																																																</p> #}
+																																																													<span class="ion-ios-telephone icon mr-5"></span>
+																																																													<span>+1 242 4942 290</span>
+																																																												</p> #}
 
 						<p class="d-flex">
 							<span class="ion-android-mail icon mr-5"></span>
@@ -483,7 +373,7 @@
         </div>
     {% endif %} #}
 
-    {# <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+{# <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
     <label for="inputEmail">Email</label>
     <input type="email" value="" name="email" id="inputEmail" class="form-control" required autofocus>
     <label for="inputPassword">Password</label>
@@ -493,7 +383,7 @@
            value="{{ csrf_token('authenticate') }}"
     > #}
 
-    {#
+{#
         Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
         See https://symfony.com/doc/current/security/remember_me.html
 
@@ -504,7 +394,7 @@
         </div>
     #}
 
-    {# <button class="btn btn-lg btn-primary" type="submit">
+{# <button class="btn btn-lg btn-primary" type="submit">
         Sign in
     </button>
 </form>
@@ -516,4 +406,4 @@
     </div>
   </div>
 </div>
-{% endblock %} #} 
+{% endblock %} #}

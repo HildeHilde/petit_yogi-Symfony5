@@ -12,7 +12,7 @@
 			<!-- Bootstrap CSS -->
 			<link
 			rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-			
+
 			<!-- ASSETS CSS -->
 			<link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700" rel="stylesheet">
 			<link rel="stylesheet" href="{{ asset ('assets/fonts/icomoon/style.css') }}">
@@ -26,6 +26,9 @@
 			<link rel="stylesheet" href="{{ asset ('assets/css/aos.css') }}">
 			<link rel="stylesheet" href="{{ asset ('assets/css/jquery.fancybox.min.css') }}">
 			<link rel="stylesheet" href="{{ asset ('assets/css/style.css') }}">
+
+			
+			{% block custom_css %}{% endblock %}
 		{% endblock %}
 	</head>
 	<body
@@ -39,7 +42,7 @@
 		{% include "includes/footerAllPages.html.twig" %}
 
 		{% block javascripts %}
-			
+
 			<script src=" {{ asset ('assets/js/jquery-3.3.1.min.js') }}"></script>
 			<script src=" {{ asset ('assets/js/jquery-ui.js') }}"></script>
 			<script src=" {{ asset ('assets/js/popper.min.js') }}"></script>
@@ -54,6 +57,9 @@
 			<script src=" {{ asset ('assets/js/isotope.pkgd.min.js') }}"></script>
 			<script src=" {{ asset ('assets/js/jquery.fancybox.min.js') }}"></script>
 			<script src=" {{ asset ('assets/js/main.js') }}"></script>
+
+			<!-- STRIPE PAYMENT -->
+			<script src="https://js.stripe.com/v3/"></script>
 
 			{% block custom_js %}{% endblock %}
 		{% endblock %}

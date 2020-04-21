@@ -52,6 +52,11 @@ class User implements UserInterface
      */
     private $member;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Subscription", inversedBy="user")
+     */
+    private $subscription;
+
     public function __construct()
     {
         $this->member = new ArrayCollection();
@@ -186,6 +191,18 @@ class User implements UserInterface
                 $member->setUser(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getSubscription(): ?Subscription
+    {
+        return $this->subscription;
+    }
+
+    public function setSubscription(?Subscription $subscription): self
+    {
+        $this->subscription = $subscription;
 
         return $this;
     }

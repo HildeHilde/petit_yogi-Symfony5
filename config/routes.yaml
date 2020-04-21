@@ -1,3 +1,8 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
+
+#route for Leal with '/' or '/accueil'
+index:
+    path: /
+    controller: App\Controller\WelcomePageController::index
