@@ -49,6 +49,7 @@ password: `HFt59?>h`
 - Le nom des routes, parfois en anglais ou en français, c'est pas très beau !
 
 
-**Apperçu**
+
+**Aperçu**
 
 <img width="1273" alt="Capture d’écran 2020-04-22 à 16 34 01" src="https://user-images.githubusercontent.com/45564137/79995142-2140d500-84b7-11ea-8d5d-61dc7e8e0aec.png">
