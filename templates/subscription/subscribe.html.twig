@@ -9,6 +9,13 @@
 
 		<script>
 			paypal.Buttons({
+				style: {
+            color:  'silver',
+            shape:  'pill',
+            layout: 'horizontal',
+            tagline: false,
+            height: 35
+    },
 				createOrder: function(data, actions) {
 				// This function sets up the details of the transaction, including the amount and line item details.
 				return actions.order.create({
