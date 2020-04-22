@@ -10,8 +10,7 @@
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-12 text-center heading-wrap">
-						<h3 class="mt-0 mb-3">Namaste,
-							{{app.user.firstname}}</h3>
+						<h3 class="mt-0 mb-3">Namaste 🙏</h3>
 					</div>
 				</div>
 			</div>
@@ -19,12 +18,12 @@
 		<!-- YOGI FAMILY -->
 		<div class="container">
 			<div class="row">
-				<div class="col-md-5 ml-5 mr-auto">
+				<div class="col-sm-4 ml-5 mr-auto">
 					<div class="text-left heading-wrap mb-5">
 						<h3 class="mt-0 mb-3">Ma Yogi Family</h3>
 						<!-- on affiche chaque membre de la table Membre ds la database -->
 						{% for m in app.user.member %}
-							<div class="mt-0 mb-5" id="{{m.id}}">
+							<div class="mt-2 mb-5" id="{{m.id}}">
 								<ul>
 									<li>{{m.firstname}}
 										né(e) le
@@ -59,13 +58,21 @@
 						</div>
 					</div>
 				</div>
+				<div class="col-sm-3 ml-auto mr-5">
+					<div class="text-left heading-wrap mb-5">
+						<h3 class="mt-0 mb-3">Mes infos</h3>
+						<ul>
+						<li>Nom: {{app.user.lastname}}</li>
+						<li>Prénom: {{app.user.firstname}}</li>
+						<li>Email: {{app.user.email}}</li>
+					</div>
+				</div>
 			</div>
-		</div>
 
-	</section>
-</section>
-{% block custom_js %}
-	<script>
-		$('#collapseMembre').collapse({toggle: false})
-	</script>
-{% endblock %}{% endblock %}
+
+		</div>
+	</div>
+</section></section>{% block custom_js %}
+<script>
+	$('#collapseMembre').collapse({toggle: false})
+</script>{% endblock %}{% endblock %}

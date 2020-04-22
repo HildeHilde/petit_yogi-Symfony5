@@ -1,4 +1,5 @@
 # PetitYogi 🧘 | Projet Symfony5 | Formation WAD-19 Interface3
+Web app de cours de yoga en ligne, pour pratiquer en famille
 
 **récupérer la db et les datas du projet**
 
@@ -28,7 +29,7 @@ password: `3=)<zNU/`
 
 - Vérifier la transaction test :
 
-Se connecter sur [sandbox](https://www.sandbox.paypal.com/) 
+Se connecter sur *le compte business* [sandbox](https://www.sandbox.paypal.com/) 
 email: `sb-5f5ec1529902@personal.example.com`
 password: `HFt59?>h`
 
@@ -46,10 +47,13 @@ password: `HFt59?>h`
 - Revoir le responsive
 
 **Ne sera pas changé, c'est triste**
-- Le nom des routes, parfois en anglais ou en français, c'est pas très beau !
 
+- Le nom des routes, parfois en anglais ou en français, c'est pas très beau !
+- Le responsive pas vraiment responsive...
 
 
 **Aperçu**
 
 <img width="1273" alt="Capture d’écran 2020-04-22 à 16 34 01" src="https://user-images.githubusercontent.com/45564137/79995142-2140d500-84b7-11ea-8d5d-61dc7e8e0aec.png">
+
+**Merci pour tout**
