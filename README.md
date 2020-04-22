@@ -10,6 +10,12 @@
 
 > `php bin/console doctrine:fixtures:load`
 
+**Lancer le Projet**
+
+- La route a été modifié pour arriver directement à la page d'accueil
+
+> `symfony serve`
+
 **Demo Paypal**
 
 - Faire un paiement _Paypal_ via SmartButton :
@@ -38,6 +44,10 @@ password: `HFt59?>h`
 - Créer une vue Compte + contenu Premium après abonnement
 - Dans session user, lui donner la possibilité de modifier son compte
 - Revoir le responsive
+
+**Ne sera pas changé, c'est triste**
+- Le nom des routes, parfois en anglais ou en français, c'est pas très beau !
+
 
 **Apperçu**
 
