@@ -2,11 +2,41 @@
 
 {% block content %}
 
-	<div id="paypal-button-container"></div>
+{% include "welcome_page/includes/headerFaq.html.twig" %}
 
+<section class="site-section" id="notre-offre">
+		<div class="container">
+			<div class="row align-items-center text-center justify-content-center">
+				{# <div class="col-12 heading-wrap text-left mb-5">
+					<h2 class="mb-5">Notre Offre</h2>
+				</div> #}
+				<div class="col-md-8">
+					<div class="blog d-block d-lg-flex">
+						<div class="bg-image" style="background-image: url({{ asset ('assets/images/yoga-girl.jpg') }});"></div>
+						<div class="text">
+							<h3>L'Abonnement</h3>
+							<strong>
+								<p>
+									<span></span>
+									<strong>6.99 € / mois</strong>
+									<br>
+								</p>
+							</strong>
+							<ul class="text-left">
+							<li>Accès Premium</li>
+							<li>Videos accessibles hors-connexion</li>
+							<li>Ajoutez jusqu'à 6 Petits Yogis</li>
+							<li>10% pour l'achat d'articles sur nos <a href="">sites partenaire</a></li>
+							</ul>
+							<div id="paypal-button-container"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
 	{% block custom_js %}
-
 		<script>
 			paypal.Buttons({
 				style: {
@@ -30,7 +60,7 @@
 				// This function captures the funds from the transaction.
 				return actions.order.capture().then(function(details) {
 					// This function shows a transaction success message to your buyer.
-					alert('Transaction completed by ' + details.payer.name.given_name);
+					alert('Paiement réussi ! ');
 				});
 				}
 			}).render('#paypal-button-container');

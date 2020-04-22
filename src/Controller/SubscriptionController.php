@@ -12,6 +12,7 @@ class SubscriptionController extends AbstractController
      */
     public function index()
     {
+        $this->getUser();
         return $this->render('subscription/subscribe.html.twig');   
     }
 }
