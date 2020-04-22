@@ -1,14 +1,20 @@
-// POUR EFFECTUER UN PAIEMENT PAYPAL
+# PetitYogi | Projet Symfony5 | Formation WAD-19 Interface3
+
+## Faire un paiement _Paypal_ via un smart button 
 
 Le projet PetitYogi simule le paiement à un abonnement mensuel de 6,99€
 
-Pour tester un paiement :
-// SE LOGGER AVEC LE COMPTE CLIENT 
-<img width="634" alt="Capture d’écran 2020-04-22 à 14 41 56" src="https://user-images.githubusercontent.com/45564137/79983375-fbf89a80-84a7-11ea-82eb-4f6b416b62fe.png">
+### Lancer un paiement test :
+*Client*
+>email: sb-voq43c1529909@personal.example.com
+>
+>password: 3=)<zNU/
 
 
-Pour verifier le paiement cote business sur sandbox.paypal.com :
-// ATTENTION : CHOISIR [FR] AU MOMENT DU LOGIN SANDBOX SINON LE PROFIL EST EN [NL]
-//
-<img width="432" alt="Capture d’écran 2020-04-22 à 12 12 02" src="https://user-images.githubusercontent.com/45564137/79969972-846c4080-8492-11ea-894f-f96d8e9c7d34.png">
-<!-- inserer capture d'ecran avec info sandbox compte business test -->
+### Vérifier la transaction test :
+*Business via _sandbox.paypal.com_
+>email: sb-5f5ec1529902@personal.example.com
+>
+>password: HFt59?>h
+
+
